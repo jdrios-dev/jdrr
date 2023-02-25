@@ -83,6 +83,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: 'arial';
 }
 
 body {
@@ -98,6 +99,11 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
 }
 
 @media (prefers-color-scheme: dark) {

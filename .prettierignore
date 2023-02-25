@@ -1,0 +1,27 @@
+# Node
+node_modules
+
+# Build
+build
+public
+
+# next.js
+.next
+/out/
+
+# schema
+graphql.schema.json
+/generated/graphql.tsx
+
+redirects.json
+
+# misc
+.DS_Store
+.env*
+
+# Testing
+_coverage
+_reports
+_test-results
+__snapshots__
+schema.json
