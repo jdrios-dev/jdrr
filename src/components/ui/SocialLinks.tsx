@@ -8,6 +8,7 @@ const SocialLinks = () => {
   const { colors } = useColor();
   return (
     <div
+      className="contact-link-container"
       style={{
         width: '200px',
         display: 'flex',

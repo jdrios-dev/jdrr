@@ -11,9 +11,10 @@ const Text = ({ children, isTitle }: TextProps) => {
   if (isTitle) {
     return (
       <h3
+        className="main-title"
         style={{
           color: colors.third,
-          fontSize: '64px',
+          fontSize: '4rem',
           textAlign: 'center',
           textShadow: '0 5px 5px rgba(0,0,0,.2)',
         }}
@@ -23,7 +24,7 @@ const Text = ({ children, isTitle }: TextProps) => {
     );
   }
 
-  return <p style={{ fontSize: '24px', lineHeight: '28px' }}> {children}</p>;
+  return <p style={{ fontSize: '1.5rem', lineHeight: '28px' }}> {children}</p>;
 };
 
 export default Text;

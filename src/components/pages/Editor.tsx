@@ -1,16 +1,15 @@
 import React from 'react';
 import { items, ItemType } from '@/utils/data';
 import useColor from '@/hooks/useColor';
+import NavigationButtons, {
+  NavigationButtonsProps,
+} from '../ui/NavigationButtons';
 
-type EditorProps = {
-  activeStep: ItemType;
-  setActiveStep: (item: ItemType) => void;
-};
-
-function Editor({ activeStep, setActiveStep }: EditorProps) {
+function Editor({ activeStep, setActiveStep }: NavigationButtonsProps) {
   const { colors } = useColor();
   return (
     <div
+      className="editor"
       style={{
         border: '2px solid white',
         margin: '10px',
@@ -22,31 +21,11 @@ function Editor({ activeStep, setActiveStep }: EditorProps) {
       }}
     >
       <div>
-        {items.map((item) => (
-          <button
-            key={item.name}
-            onClick={() => setActiveStep(item)}
-            style={{
-              padding: '5px 10px',
-              borderRadius: '5px 5px 0 0',
-              border: `1px solid ${colors.dark}`,
-              backgroundColor:
-                activeStep.name === item.name ? colors.dark : colors.secondary,
-              boxShadow:
-                activeStep.name === item.name
-                  ? 'none'
-                  : 'inset 0 -4px 4px rgba(0,0,0,0.3)',
-              color:
-                activeStep.name === item.name
-                  ? 'white'
-                  : 'rgba(255,255,255,0.7)',
-              transition: 'all 0.3s',
-              fontSize: '18px',
-            }}
-          >
-            {item.name}
-          </button>
-        ))}
+        <NavigationButtons
+          setActiveStep={setActiveStep}
+          activeStep={activeStep}
+          showExtension
+        />
       </div>
 
       <div
@@ -69,7 +48,7 @@ function Editor({ activeStep, setActiveStep }: EditorProps) {
                 width: '24px',
                 margin: '0 16px',
                 opacity: '0.4',
-                fontSize: '24px',
+                fontSize: '1.5rem',
               }}
             >
               {index + 1}
@@ -77,7 +56,7 @@ function Editor({ activeStep, setActiveStep }: EditorProps) {
             <p
               style={{
                 color: 'rgba(255, 255, 255, 0.9)',
-                fontSize: '24px',
+                fontSize: '1.5rem',
               }}
             >
               {line}

@@ -7,7 +7,7 @@ const MySkills = () => {
     'React',
     'React Native',
     'GraphQL',
-    'JS / HTML / CSS',
+    'JavaScript',
     'Git',
     'Hasura',
     'Cypress',

@@ -17,7 +17,7 @@ const ContactMe = () => {
       <Text>
         Want to chat? I'm just a few clicks away! Connect with me on LinkedIn,
         drop me a line at my email, or take a peek at my GitHub profile. Let's
-        make some magic together! 🔍 📧 💻
+        make some magic together!
       </Text>
       <SocialLinks />
     </div>

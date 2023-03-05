@@ -10,6 +10,7 @@ import MySkills from './MySkills';
 import Experience from './Experience';
 import ContactMe from './ContactMe';
 import MyName from '../ui/MyName';
+import NavigationButtons from '../ui/NavigationButtons';
 
 function HomeComponent() {
   const [activeStep, setActiveStep] = useState(items[0]);
@@ -32,6 +33,7 @@ function HomeComponent() {
   };
   return (
     <>
+      <MyName />
       <div
         style={{
           display: 'flex',
@@ -45,7 +47,12 @@ function HomeComponent() {
 
         <Card title={activeStep.title}>{getComponent(activeStep.name)}</Card>
       </div>
-      <MyName />
+      <div className="mobile-navigation-buttons" style={{ display: 'none' }}>
+        <NavigationButtons
+          activeStep={activeStep}
+          setActiveStep={setActiveStep}
+        />
+      </div>
     </>
   );
 }

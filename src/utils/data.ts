@@ -9,11 +9,13 @@ export type ItemType = {
   code: string[];
   component: () => JSX.Element;
   title: string;
+  mobileName: string;
 };
 
 export const items: ItemType[] = [
   {
     name: 'About.tsx',
+    mobileName: 'About',
     code: [
       "import React from 'react'",
       '　',
@@ -36,6 +38,7 @@ export const items: ItemType[] = [
   },
   {
     name: 'Skills.tsx',
+    mobileName: 'Skills',
     code: [
       "import React from 'react'",
       '　',
@@ -58,6 +61,7 @@ export const items: ItemType[] = [
 
   {
     name: 'Experience.tsx',
+    mobileName: 'Experience',
     code: [
       "import React from 'react'",
       "import {workExperience} from 'data.ts'",
@@ -83,6 +87,7 @@ export const items: ItemType[] = [
   },
   {
     name: 'Contact.tsx',
+    mobileName: 'Contact',
     code: [
       "import React from 'react'",
       '　',
@@ -106,17 +111,15 @@ export const items: ItemType[] = [
   },
   {
     name: 'Config.ts',
+    mobileName: 'Config',
     code: [
       "import React from 'react'",
       '　',
       'const MyConfig = (　) => {',
       '　',
       '　return (',
-      "　　<Card title='Contact Me' >",
-      '　　　<Text>',
-      '　　　　{myDescription}',
-      '　　　</Text>',
-      '　　　<SocialMediaLinks />',
+      "　　<Card title='My Config' >",
+      '　　　<CustomColor />',
       '　　</Card>',
       '　)',
       '}',

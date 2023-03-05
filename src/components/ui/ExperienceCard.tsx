@@ -17,7 +17,7 @@ const ExperienceCard = ({ item }: ExperienceCardProp) => {
       <h3
         style={{
           marginBottom: '0.5rem',
-          fontSize: '24px',
+          fontSize: '1.5rem',
         }}
       >
         {company}
